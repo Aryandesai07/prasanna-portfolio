@@ -1,0 +1,1046 @@
+/* ============================================================
+                    HOME SECTION
+============================================================ */
+
+.home-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ============================================================
+                    WELCOME TEXT
+============================================================ */
+
+.welcome-text{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+/* ============================================================
+                    HERO TITLE
+============================================================ */
+
+.hero-title{
+
+    font-size:68px;
+
+    font-weight:800;
+
+    color:var(--white);
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+.hero-title span{
+
+    color:var(--accent);
+
+}
+
+/* ============================================================
+                    HERO SUBTITLE
+============================================================ */
+
+.hero-subtitle{
+
+    font-size:30px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+    color:var(--white);
+
+}
+
+#typing-span{
+
+    color:var(--primary);
+
+}
+
+/* ============================================================
+                    DESCRIPTION
+============================================================ */
+
+.hero-description{
+
+    max-width:650px;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:var(--text-light);
+
+    margin-bottom:35px;
+
+}
+
+/* ============================================================
+                    BUTTON GROUP
+============================================================ */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}
+
+/* ============================================================
+                    SOCIAL ICONS
+============================================================ */
+
+.social-icons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:40px;
+
+}
+
+.social-icons a{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--card);
+
+    color:var(--white);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.social-icons a i{
+
+    font-size:26px;
+
+}
+
+.social-icons a:hover{
+
+    background:var(--primary);
+
+    color:#000;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(0,212,255,.35);
+
+}
+
+/* ============================================================
+                    HERO STATS
+============================================================ */
+
+.hero-stats{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+.stat-box{
+
+    min-width:150px;
+
+    background:var(--card);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+}
+
+.stat-box h2{
+
+    color:var(--accent);
+
+    margin-bottom:10px;
+
+}
+
+.stat-box p{
+
+    margin:0;
+
+    color:var(--text-light);
+
+}
+
+/* ============================================================
+                END OF HOME.CSS PART 1
+============================================================ */
+
+/* ============================================================
+                    PROFILE CARD
+============================================================ */
+
+.profile-card{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.profile-circle{
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    padding:10px;
+
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary),
+        var(--accent)
+    );
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.profile-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border-radius:50%;
+
+    background:var(--bg);
+
+    z-index:1;
+
+}
+
+.profile-image{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid rgba(255,255,255,.08);
+
+}
+
+.profile-glow{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(0,212,255,.28),
+        transparent 70%
+    );
+
+    filter:blur(60px);
+
+    z-index:-1;
+
+}
+
+/* ============================================================
+                BACKGROUND DECORATIONS
+============================================================ */
+
+.home-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(0,212,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    left:-120px;
+
+    filter:blur(70px);
+
+}
+
+.home-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:rgba(124,58,237,.10);
+
+    border-radius:50%;
+
+    right:-100px;
+
+    bottom:-100px;
+
+    filter:blur(70px);
+
+}
+
+/* ============================================================
+                    HERO IMAGE BADGE
+============================================================ */
+
+.profile-card::after{
+
+    content:"Available for Work";
+
+    position:absolute;
+
+    right:-15px;
+
+    bottom:30px;
+
+    background:var(--accent);
+
+    color:#111;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    box-shadow:0 10px 25px rgba(250,204,21,.35);
+
+}
+
+/* ============================================================
+                    HERO BUTTONS
+============================================================ */
+
+.hero-buttons .btn{
+
+    min-width:180px;
+
+    font-weight:600;
+
+}
+
+.hero-buttons .btn i{
+
+    margin-right:8px;
+
+}
+
+/* ============================================================
+                    HERO CONTENT
+============================================================ */
+
+.hero-title,
+.hero-subtitle,
+.hero-description,
+.hero-buttons,
+.social-icons,
+.hero-stats{
+
+    animation:fadeLeft .9s ease;
+
+}
+
+.profile-card{
+
+    animation:fadeRight .9s ease;
+
+}
+
+/* ============================================================
+                    HERO HIGHLIGHT
+============================================================ */
+
+.hero-title span{
+
+    background:linear-gradient(
+        90deg,
+        var(--accent),
+        var(--primary)
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+}
+
+/* ============================================================
+                    RESPONSIVE
+============================================================ */
+
+@media(max-width:992px){
+
+    .home-section{
+
+        text-align:center;
+
+    }
+
+    .hero-description{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-stats{
+
+        justify-content:center;
+
+    }
+
+    .social-icons{
+
+        justify-content:center;
+
+    }
+
+    .profile-circle{
+
+        width:340px;
+
+        height:340px;
+
+        margin-top:50px;
+
+    }
+
+    .profile-glow{
+
+        width:420px;
+
+        height:420px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-title{
+
+        font-size:48px;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:24px;
+
+    }
+
+    .profile-circle{
+
+        width:280px;
+
+        height:280px;
+
+    }
+
+    .profile-glow{
+
+        width:340px;
+
+        height:340px;
+
+    }
+
+    .profile-card::after{
+
+        font-size:12px;
+
+        padding:10px 18px;
+
+        right:0;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hero-title{
+
+        font-size:38px;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:20px;
+
+    }
+
+    .hero-description{
+
+        font-size:15px;
+
+    }
+
+    .profile-circle{
+
+        width:240px;
+
+        height:240px;
+
+    }
+
+    .profile-glow{
+
+        width:300px;
+
+        height:300px;
+
+    }
+
+}
+
+/* ============================================================
+                END OF HOME.CSS PART 2
+============================================================ */
+
+/* ============================================================
+                    HERO DECORATIVE SHAPES
+============================================================ */
+
+.hero-shape{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    z-index:-2;
+
+    opacity:.35;
+
+}
+
+.hero-shape.one{
+
+    width:280px;
+
+    height:280px;
+
+    background:var(--primary);
+
+    top:8%;
+
+    left:-120px;
+
+}
+
+.hero-shape.two{
+
+    width:320px;
+
+    height:320px;
+
+    background:var(--secondary);
+
+    bottom:5%;
+
+    right:-120px;
+
+}
+
+.hero-shape.three{
+
+    width:180px;
+
+    height:180px;
+
+    background:var(--accent);
+
+    top:45%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+/* ============================================================
+                    SCROLL DOWN INDICATOR
+============================================================ */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.scroll-indicator span{
+
+    color:var(--text-light);
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.scroll-mouse{
+
+    width:32px;
+
+    height:54px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-radius:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.scroll-wheel{
+
+    width:6px;
+
+    height:12px;
+
+    border-radius:20px;
+
+    margin-top:8px;
+
+    background:var(--primary);
+
+    animation:scrollWheel 2s infinite;
+
+}
+
+@keyframes scrollWheel{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    40%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+}
+
+/* ============================================================
+                    HERO IMAGE EFFECTS
+============================================================ */
+
+.profile-card:hover .profile-circle{
+
+    transform:scale(1.03);
+
+    transition:.5s;
+
+}
+
+.profile-card:hover .profile-image{
+
+    transform:scale(1.05);
+
+    transition:.5s;
+
+}
+
+.profile-card:hover .profile-glow{
+
+    opacity:.9;
+
+    transition:.5s;
+
+}
+
+/* ============================================================
+                    HERO STATS EFFECT
+============================================================ */
+
+.stat-box{
+
+    cursor:pointer;
+
+}
+
+.stat-box:hover h2{
+
+    color:var(--primary);
+
+    transition:.3s;
+
+}
+
+.stat-box:hover p{
+
+    color:var(--white);
+
+}
+
+/* ============================================================
+                    BUTTON EFFECTS
+============================================================ */
+
+.hero-buttons .btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero-buttons .btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.15);
+
+    transform:skewX(-25deg);
+
+    transition:.6s;
+
+}
+
+.hero-buttons .btn:hover::before{
+
+    left:120%;
+
+}
+
+/* ============================================================
+                    SOCIAL ICON ANIMATION
+============================================================ */
+
+.social-icons a{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.social-icons a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.15);
+
+    transform:scale(0);
+
+    border-radius:50%;
+
+    transition:.4s;
+
+}
+
+.social-icons a:hover::after{
+
+    transform:scale(1.4);
+
+    opacity:0;
+
+}
+
+/* ============================================================
+                    HERO TEXT ANIMATION
+============================================================ */
+
+.hero-title{
+
+    animation:fadeLeft 1s ease;
+
+}
+
+.hero-subtitle{
+
+    animation:fadeLeft 1.2s ease;
+
+}
+
+.hero-description{
+
+    animation:fadeLeft 1.4s ease;
+
+}
+
+.hero-buttons{
+
+    animation:fadeLeft 1.6s ease;
+
+}
+
+.hero-stats{
+
+    animation:fadeUp 1.8s ease;
+
+}
+
+/* ============================================================
+                    MOBILE
+============================================================ */
+
+@media(max-width:768px){
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .hero-buttons .btn{
+
+        width:260px;
+
+    }
+
+    .hero-stats{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .stat-box{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .profile-card::after{
+
+        display:none;
+
+    }
+
+    .hero-description{
+
+        padding:0 10px;
+
+    }
+
+    .social-icons{
+
+        gap:12px;
+
+    }
+
+    .social-icons a{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+    .social-icons a i{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+/* ==========================================================
+                COUNTER ANIMATION EFFECT
+========================================================== */
+
+.counter{
+
+    display:inline-block;
+
+    transition:all .35s ease;
+
+}
+
+.counter.counting{
+
+    color:#ffc107;
+
+    transform:scale(1.15);
+
+    text-shadow:
+        0 0 10px rgba(255,193,7,.50),
+        0 0 20px rgba(255,193,7,.35),
+        0 0 35px rgba(255,193,7,.20);
+
+}
+
+.counter.finished{
+
+    color:#ffffff;
+
+    transform:scale(1);
+
+    text-shadow:none;
+
+}
+/* ============================================================
+                END OF HOME.CSS
+============================================================ */

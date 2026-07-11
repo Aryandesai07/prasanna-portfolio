@@ -1,0 +1,117 @@
+/* ==========================================================
+                SCROLL TO TOP BUTTON
+========================================================== */
+
+.scroll-top-btn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#ffc107,#ff9800);
+
+    color:#111;
+
+    font-size:34px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(30px);
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 10px 30px rgba(255,193,7,.35);
+
+}
+
+/* ========================================================== */
+
+.scroll-top-btn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/* ========================================================== */
+
+.scroll-top-btn:hover{
+
+    transform:translateY(-8px) scale(1.08);
+
+    box-shadow:
+        0 18px 40px rgba(255,193,7,.50);
+
+}
+
+/* ========================================================== */
+
+.scroll-top-btn:active{
+
+    transform:scale(.95);
+
+}
+
+/* ========================================================== */
+
+.scroll-top-btn i{
+
+    transition:.3s;
+
+}
+
+.scroll-top-btn:hover i{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+                MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+    .scroll-top-btn{
+
+        right:18px;
+
+        bottom:18px;
+
+        width:52px;
+
+        height:52px;
+
+        font-size:30px;
+
+    }
+
+}

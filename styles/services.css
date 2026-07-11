@@ -1,0 +1,506 @@
+/* ============================================================
+                    SERVICES SECTION
+============================================================ */
+
+#services{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--bg2);
+
+}
+
+/* ============================================================
+                    SECTION TITLE
+============================================================ */
+
+#services .section-title{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+#services .section-description{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 70px;
+
+}
+
+/* ============================================================
+                    SERVICE GRID
+============================================================ */
+
+.service-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* ============================================================
+                    SERVICE CARD
+============================================================ */
+
+.service-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px 30px;
+
+    border-radius:22px;
+
+    background:var(--card);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+    cursor:pointer;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 20px 45px rgba(0,212,255,.18);
+
+}
+
+/* ============================================================
+                    TOP BORDER
+============================================================ */
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--accent)
+    );
+
+    transition:.45s;
+
+}
+
+.service-card:hover::before{
+
+    width:100%;
+
+}
+
+/* ============================================================
+                    SERVICE ICON
+============================================================ */
+
+.service-icon{
+
+    width:85px;
+
+    height:85px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,212,255,.08);
+
+    margin-bottom:28px;
+
+    transition:.4s;
+
+}
+
+.service-icon i{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+}
+
+.service-card:hover .service-icon{
+
+    background:var(--primary);
+
+    transform:rotate(-8deg);
+
+}
+
+.service-card:hover .service-icon i{
+
+    color:#000;
+
+}
+
+/* ============================================================
+                    SERVICE TITLE
+============================================================ */
+
+.service-card h3{
+
+    color:var(--white);
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+/* ============================================================
+                    SERVICE DESCRIPTION
+============================================================ */
+
+.service-card p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+/* ============================================================
+                    SERVICE TAGS
+============================================================ */
+
+.service-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.service-tags span{
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.06);
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.service-card:hover .service-tags span{
+
+    background:var(--primary);
+
+    color:#000;
+
+}
+
+/* ============================================================
+                    END OF PART 1
+============================================================ */
+
+/* ============================================================
+                READ MORE BUTTON
+============================================================ */
+
+.service-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:25px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.service-btn i{
+
+    transition:.35s;
+
+}
+
+.service-btn:hover{
+
+    color:var(--accent);
+
+}
+
+.service-btn:hover i{
+
+    transform:translateX(8px);
+
+}
+
+/* ============================================================
+                SERVICE CARD NUMBER
+============================================================ */
+
+.service-number{
+
+    position:absolute;
+
+    top:25px;
+
+    right:25px;
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.05);
+
+    transition:.4s;
+
+}
+
+.service-card:hover .service-number{
+
+    color:rgba(0,212,255,.15);
+
+    transform:scale(1.15);
+
+}
+
+/* ============================================================
+                CARD GLOW
+============================================================ */
+
+.service-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:22px;
+
+    background:radial-gradient(
+        circle at top left,
+        rgba(0,212,255,.15),
+        transparent 70%
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+    pointer-events:none;
+
+}
+
+.service-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* ============================================================
+                BACKGROUND DECORATIONS
+============================================================ */
+
+#services::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:rgba(0,212,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    left:-120px;
+
+    filter:blur(80px);
+
+}
+
+#services::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    background:rgba(124,58,237,.10);
+
+    border-radius:50%;
+
+    right:-120px;
+
+    bottom:-120px;
+
+    filter:blur(80px);
+
+}
+
+/* ============================================================
+                ICON FLOAT ANIMATION
+============================================================ */
+
+.service-card:hover .service-icon{
+
+    animation:float 2s ease-in-out infinite;
+
+}
+
+/* ============================================================
+                TITLE EFFECT
+============================================================ */
+
+.service-card:hover h3{
+
+    color:var(--accent);
+
+    transition:.35s;
+
+}
+
+/* ============================================================
+                CARD ENTRY ANIMATION
+============================================================ */
+
+.service-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* ============================================================
+                RESPONSIVE
+============================================================ */
+
+@media(max-width:992px){
+
+    .service-list{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .service-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .service-card{
+
+        padding:35px 25px;
+
+    }
+
+    .service-icon{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+    .service-icon i{
+
+        font-size:36px;
+
+    }
+
+    .service-card h3{
+
+        font-size:22px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .service-card{
+
+        padding:30px 20px;
+
+    }
+
+    .service-number{
+
+        font-size:38px;
+
+    }
+
+    .service-tags{
+
+        gap:8px;
+
+    }
+
+    .service-tags span{
+
+        font-size:12px;
+
+        padding:6px 12px;
+
+    }
+
+}
+
+/* ============================================================
+                END OF SERVICES.CSS
+============================================================ */
+
