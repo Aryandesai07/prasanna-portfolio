@@ -48,8 +48,10 @@ function updateActiveNav() {
 
 window.addEventListener("scroll", updateActiveNav);
 window.addEventListener("load", updateActiveNav);
+
+
 /* ==========================================================
-                SMOOTH SCROLL
+        SMOOTH SCROLL + AUTO CLOSE MOBILE MENU
 ========================================================== */
 
 navLinks.forEach(link => {
@@ -72,10 +74,22 @@ navLinks.forEach(link => {
 
         }
 
+        // Close Bootstrap mobile menu
+        const navbarCollapse = document.querySelector(".navbar-collapse");
+
+        if (navbarCollapse.classList.contains("show")) {
+
+            const bsCollapse =
+                bootstrap.Collapse.getInstance(navbarCollapse) ||
+                new bootstrap.Collapse(navbarCollapse);
+
+            bsCollapse.hide();
+
+        }
+
     });
 
 });
-
 /* ==========================================================
                 NAVBAR SCROLL EFFECT
 ========================================================== */
@@ -385,34 +399,25 @@ filterButtons.forEach(button => {
                 MOBILE MENU AUTO CLOSE
 ========================================================== */
 
-const navbarCollapse = document.querySelector(".navbar-collapse");
-
-navLinks.forEach(link => {
+navLinks.forEach((link) => {
 
     link.addEventListener("click", () => {
 
         if (
-
-            navbarCollapse &&
-
+            window.innerWidth < 992 &&
             navbarCollapse.classList.contains("show")
-
         ) {
 
-            const collapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            const bsCollapse =
+                bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
 
-            if (collapse) {
-
-                collapse.hide();
-
-            }
+            bsCollapse.hide();
 
         }
 
     });
 
 });
-
 /* ==========================================================
                 BUTTON RIPPLE EFFECT
 ========================================================== */
