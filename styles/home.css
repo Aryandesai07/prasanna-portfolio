@@ -240,18 +240,6 @@
                     PROFILE CARD
 ============================================================ */
 
-.profile-card{
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
 .profile-circle{
 
     width:420px;
@@ -439,12 +427,6 @@
 .hero-stats{
 
     animation:fadeLeft .9s ease;
-
-}
-
-.profile-card{
-
-    animation:fadeRight .9s ease;
 
 }
 
@@ -1044,3 +1026,30 @@
 /* ============================================================
                 END OF HOME.CSS
 ============================================================ */
+
+/* ==========================================
+   HERO IMAGE POSITION
+========================================== */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.profile-card{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
